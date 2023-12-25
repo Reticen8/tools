@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (c) 2016-2021 Franco Fichtner <franco@opnsense.org>
+# Copyright (c) 2016-2021 Franco Fichtner <franco@reticen8.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -31,7 +31,7 @@ SELF=sign
 
 . ./common.sh
 
-VERSIONDIR="/usr/local/opnsense/version"
+VERSIONDIR="/usr/local/reticen8/version"
 
 for ARG in ${@}; do
 	case ${ARG} in
