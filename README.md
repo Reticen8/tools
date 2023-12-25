@@ -1,8 +1,8 @@
-About the OPNsense tools
+About the Reticen8 tools
 ========================
 
 In conjunction with src.git, ports.git, core.git and plugins.git they
-create sets, packages and images for the OPNsense project.
+create sets, packages and images for the Reticen8 project.
 
 Setting up a build system
 =========================
@@ -15,18 +15,18 @@ All tasks require a root user.  Do the following to grab the repositories
 
     # pkg install git
     # cd /usr
-    # git clone https://github.com/opnsense/tools
+    # git clone https://github.com/reticen8/tools
     # cd tools
     # make update
 
-Note that the OPNsense repositories can also be setup in a non-/usr directory
+Note that the Reticen8 repositories can also be setup in a non-/usr directory
 by setting ROOTDIR.  For example:
 
-    # mkdir -p /tmp/opnsense
-    # cd /tmp/opnsense
-    # git clone https://github.com/opnsense/tools
+    # mkdir -p /tmp/reticen8
+    # cd /tmp/reticen8
+    # git clone https://github.com/reticen8/tools
     # cd tools
-    # env ROOTDIR=/tmp/opnsense make update
+    # env ROOTDIR=/tmp/reticen8 make update
 
 TL;DR
 =====
@@ -69,7 +69,7 @@ Available build options are:
 * DEVICE:	loads device-specific modifications, e.g. "A10" (default)
 * KERNEL:	the kernel config to use, e.g. SMP (default)
 * MIRRORS:	a list of mirrors to prefetch sets from
-* NAME:		"OPNsense" (default)
+* NAME:		"Reticen8" (default)
 * PRIVKEY:	the private key for signing sets
 * PUBKEY:	the public key for signing sets
 * SUFFIX:	the suffix of top package name (default is empty)
@@ -411,10 +411,10 @@ Please note that login is only possible via the Nano and Serial images.
 
 Booting VM images will not work for types other than "raw".
 
-Generating a make.conf for use in running OPNsense
+Generating a make.conf for use in running Reticen8
 --------------------------------------------------
 
-A ports tree in a running OPNsense can be used to build packages
+A ports tree in a running Reticen8 can be used to build packages
 not published on the mirrors.  To generate the make.conf contents
 for standalone use on the host use:
 
@@ -505,7 +505,7 @@ use the following:
 
     # make custom-<image> ADDITIONS="an-existing-plugin path/to/extra/plugin"
 
-Last but not least, a rebuild of OPNsense core and plugins on package
+Last but not least, a rebuild of Reticen8 core and plugins on package
 sets is invoked using:
 
     # make hotfix[-<step>]
