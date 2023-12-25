@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (c) 2015-2022 Franco Fichtner <franco@opnsense.org>
+# Copyright (c) 2015-2022 Franco Fichtner <franco@reticen8.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -34,7 +34,7 @@ SELF=rebase
 setup_stage ${STAGEDIR}
 
 BASESET=$(find_set base)
-OBSOLETE=/usr/local/opnsense/version/base.obsolete
+OBSOLETE=/usr/local/reticen8/version/base.obsolete
 
 tar -tf ${BASESET} | sed -e 's/^\.//g' -e '/\/$/d' | \
     grep -v -e '\.mtree\.sig$' -e '\.abi_hint$' | \
