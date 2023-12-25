@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (c) 2016-2017 Franco Fichtner <franco@opnsense.org>
+# Copyright (c) 2016-2017 Franco Fichtner <franco@reticen8.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -45,7 +45,7 @@ chroot ${STAGEDIR} /bin/sh -es <<EOF
 for DIR in ${PACKAGESDIR}/Latest ${SETSDIR}; do
 	for FILE in \$(find \${DIR} -name "*.sig"); do
 		echo ">>> Verifying \${FILE%%.sig}:"
-		opnsense-verify \${FILE%%.sig}
+		reticen8-verify \${FILE%%.sig}
 	done
 done
 EOF
