@@ -1,4 +1,4 @@
-# Copyright (c) 2015-2023 Franco Fichtner <franco@opnsense.org>
+# Copyright (c) 2015-2023 Franco Fichtner <franco@reticen8.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -76,7 +76,7 @@ _CONFIGDIR=	${DIR:C/\/build\.conf$//}
 
 # Bootstrap the build options if not set:
 
-NAME?=		OPNsense
+NAME?=		Reticen8
 TYPE?=		${NAME:tl}
 SUFFIX?=	# empty
 _ARCH!=		uname -p
@@ -89,13 +89,13 @@ DEVICE?=	A10
 COMSPEED?=	115200
 UEFI?=		arm dvd serial vga vm
 ZFS?=		# empty
-GITBASE?=	https://github.com/opnsense
-MIRRORS?=	https://opnsense.c0urier.net \
-		https://mirrors.nycbug.org/pub/opnsense \
-		https://mirror.wdc1.us.leaseweb.net/opnsense \
-		https://mirror.sfo12.us.leaseweb.net/opnsense \
-		https://mirror.fra10.de.leaseweb.net/opnsense \
-		https://mirror.ams1.nl.leaseweb.net/opnsense
+GITBASE?=	https://github.com/reticen8
+MIRRORS?=	https://reticen8.c0urier.net \
+		https://mirrors.nycbug.org/pub/reticen8 \
+		https://mirror.wdc1.us.leaseweb.net/reticen8 \
+		https://mirror.sfo12.us.leaseweb.net/reticen8 \
+		https://mirror.fra10.de.leaseweb.net/reticen8 \
+		https://mirror.ams1.nl.leaseweb.net/reticen8
 SERVER?=	user@does.not.exist
 UPLOADDIR?=	.
 _VERSION!=	date '+%Y%m%d%H%M'
