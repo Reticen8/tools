@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (c) 2014-2022 Franco Fichtner <franco@opnsense.org>
+# Copyright (c) 2014-2022 Franco Fichtner <franco@reticen8.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -75,12 +75,12 @@ setup_stage ${STAGEDIR} work
 setup_set ${STAGEDIR}/work ${BASE_OBJ}
 
 # needs to be in obsolete file list for control purposes
-mkdir -p ${STAGEDIR}/work/usr/local/opnsense/version
-touch ${STAGEDIR}/work/usr/local/opnsense/version/base
-touch ${STAGEDIR}/work/usr/local/opnsense/version/base.arch
-touch ${STAGEDIR}/work/usr/local/opnsense/version/base.mtree
-touch ${STAGEDIR}/work/usr/local/opnsense/version/base.obsolete
-touch ${STAGEDIR}/work/usr/local/opnsense/version/base.size
+mkdir -p ${STAGEDIR}/work/usr/local/reticen8/version
+touch ${STAGEDIR}/work/usr/local/reticen8/version/base
+touch ${STAGEDIR}/work/usr/local/reticen8/version/base.arch
+touch ${STAGEDIR}/work/usr/local/reticen8/version/base.mtree
+touch ${STAGEDIR}/work/usr/local/reticen8/version/base.obsolete
+touch ${STAGEDIR}/work/usr/local/reticen8/version/base.size
 
 echo -n ">>> Generating obsolete file list... "
 
