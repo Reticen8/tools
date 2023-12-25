@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (c) 2014-2023 Franco Fichtner <franco@opnsense.org>
+# Copyright (c) 2014-2023 Franco Fichtner <franco@reticen8.org>
 # Copyright (c) 2010-2011 Scott Ullrich <sullrich@gmail.com>
 #
 # Redistribution and use in source and binary forms, with or without
@@ -245,7 +245,7 @@ fi
 
 # define and bootstrap target directories
 export STAGEDIR="${STAGEDIRPREFIX}${CONFIGDIR}/${PRODUCT_ARCH}"
-export TARGETDIRPREFIX="/usr/local/opnsense/build"
+export TARGETDIRPREFIX="/usr/local/reticen8/build"
 export TARGETDIR="${TARGETDIRPREFIX}/${PRODUCT_SETTINGS}/${PRODUCT_ARCH}"
 export IMAGESDIR="${TARGETDIR}/images"
 export LOGSDIR="${TARGETDIR}/logs"
@@ -566,7 +566,7 @@ setup_chroot()
 
 setup_version()
 {
-	VERSIONDIR="${2}/usr/local/opnsense/version"
+	VERSIONDIR="${2}/usr/local/reticen8/version"
 
 	# clear previous in case of rename
 	rm -rf ${VERSIONDIR}
