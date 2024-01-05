@@ -89,8 +89,8 @@ DEVICE?=	A10
 COMSPEED?=	115200
 UEFI?=		arm dvd serial vga vm
 ZFS?=		# empty
-GITBASE?=	https://github.com/reticen8
-MIRRORS?=	# https://reticen8.c0urier.net \
+GITBASE?=	https://github.com/Reticen8
+MIRRORS?=	# none
 		
 SERVER?=	user@does.not.exist
 UPLOADDIR?=	.
