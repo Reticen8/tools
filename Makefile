@@ -1,4 +1,4 @@
-# Copyright (c) 2015-2023 Franco Fichtner <franco@reticen8.org>
+# Copyright (c) 2015-2023 Franco Fichtner <franco@opnsense.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -57,7 +57,6 @@ ROOTDIR?=	/usr
 
 TOOLSDIR?=	${ROOTDIR}/tools
 TOOLSBRANCH?=	master
-SETTINGS?= 1.1
 
 .if defined(CONFIGDIR)
 _CONFIGDIR=	${CONFIGDIR}
@@ -84,14 +83,14 @@ _ARCH!=		uname -p
 ARCH?=		${_ARCH}
 ABI?=		${_CONFIGDIR:C/^.*\///}
 KERNEL?=	SMP
-ADDITIONS?=	os-bind${SUFFIX} os-clamav${SUFFIX} os-c-icap${SUFFIX} os-crowdsec${SUFFIX} os-ddclient${SUFFIX} os-dnscrypt-proxy${SUFFIX} os-etpro-telemetry${SUFFIX} os-firewall${SUFFIX} os-freeradius${SUFFIX} os-frr${SUFIX} os-ftp-proxy${SUFFIX} os-google-cloud-sdk${SUFFIX} os-haproxy${SUFFIX} os-igmp-proxy${SUFFIX} os-intrusion-detection-content-et-open${SUFFIX} os-intrusion-detection-content-pt-open${SUFFIX} os-iperf${SUFFIX} os-lldpd${SUFFIX} os-maltrail${SUFFIX} os-mdns-repeater${SUFFIX} os-munin-node${SUFFIX} os-net-snmp${SUFFIX} os-netdata${SUFFIX} os-nginx${SUFFIX} os-ntopng${SUFFIX} os-openconnect${SUFFIX} os-postfix${SUFFIX} os-radsecproxy${SUFFIX} os-redis${SUFFIX} os-relayd${SUFFIX} os-rfc2136${SUFFIX} os-rspamd${SUFFIX} os-shadowsocks${SUFFIX} os-siproxd${SUFFIX} os-sslh${SUFFIX} os-stunnel${SUFFIX} os-sunnyvalley${SUFFIX} os-tayga${SUFFIX} os-tftp${SUFFIX} os-tinc${SUFFIX} os-udpbroadcastrelay${SUFFIX} os-wazuh-agent${SUFFIX} os-web-proxy-sso${SUFFIX} os-wireguard${SUFFIX} os-wol${SUFFIX} os-zabbix-agent${SUFFIX} os-zabbix64-proxy${SUFFIX} os-zerotier${SUFFIX}
+ADDITIONS?=	# empty
 DEBUG?=		# empty
 DEVICE?=	A10
 COMSPEED?=	115200
 UEFI?=		arm dvd serial vga vm
 ZFS?=		# empty
 GITBASE?=	https://github.com/Reticen8
-MIRRORS?=	# empty		
+MIRRORS?=	none
 SERVER?=	user@does.not.exist
 UPLOADDIR?=	.
 _VERSION!=	date '+%Y%m%d%H%M'
@@ -99,12 +98,13 @@ VERSION?=	${_VERSION}
 STAGEDIRPREFIX?=/usr/obj
 
 EXTRABRANCH?=	# empty
-COREBRANCH?=	master
+
+COREBRANCH?=	stable/${ABI}
 COREVERSION?=	# empty
 COREDIR?=	${ROOTDIR}/core
 COREENV?=	CORE_PHP=${PHP} CORE_ABI=${ABI} CORE_PYTHON=${PYTHON}
 
-PLUGINSBRANCH?=	master
+PLUGINSBRANCH?=	stable/${ABI}
 PLUGINSDIR?=	${ROOTDIR}/plugins
 PLUGINSENV?=	PLUGIN_PHP=${PHP} PLUGIN_ABI=${ABI} PLUGIN_PYTHON=${PYTHON}
 
@@ -116,7 +116,7 @@ PORTSREFURL?=	https://git.FreeBSD.org/ports.git
 PORTSREFDIR?=	${ROOTDIR}/freebsd-ports
 PORTSREFBRANCH?=main
 
-SRCBRANCH?=	master
+SRCBRANCH?=	stable/${ABI}
 SRCDIR?=	${ROOTDIR}/src
 
 # A couple of meta-targets for easy use and ordering:
